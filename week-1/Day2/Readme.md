@@ -1,95 +1,81 @@
-# 🚀 Day 3 – SQL Practice (CASE, Window Functions & Advanced Functions)
+# 🚀 Day 2 – SQL Practice (Group By & Joins)
 
 ## 📌 Objective
 
-The objective of Day 3 was to strengthen SQL skills by practicing **CASE statements, window functions, string functions, NULL handling, and date manipulation**, and applying them to solve real-world problems.
+The objective of Day 2 was to understand and practice *GROUP BY functions and JOIN operations in SQL*, and apply them to solve real-world data problems using Databricks.
 
 ---
 
 ## 📊 Topics Covered
 
-* CASE and WHEN statements
-* Window functions
-* String functions
-* NULL handling functions
-* Date manipulation functions
+* GROUP BY and aggregation functions
+* Different types of JOINs
+* Writing SQL queries in Databricks
+* Solving practical data problems
 
 ---
 
 ## ⚙️ Work Done
 
-### 🔹 CASE & WHEN Statements
+### 🔹 Data Handling
 
-* Used `CASE WHEN` for conditional logic
-* Categorized data based on conditions
-* Created new derived columns
+* Worked with datasets in Databricks using SQL
+* Verified data using SELECT queries
 
-### 🔹 Window Functions
+### 🔹 GROUP BY Operations
 
-* Applied window functions for advanced analysis:
+* Performed aggregations using GROUP BY
+* Calculated:
 
-  * `ROW_NUMBER()`
-  * `RANK()`
-  * `DENSE_RANK()`
-  * `SUM()` over window
-* Performed ranking and running total calculations
+  * Total values using SUM()
+  * Counts using COUNT()
+  * Average using AVG()
 
-### 🔹 String Functions
+### 🔹 JOIN Operations
 
-* Worked with string operations:
+* Practiced different types of joins:
 
-  * `UPPER()`, `LOWER()`
-  * `TRIM()`
-  * `CONCAT()`
-* Cleaned and formatted text data
+  * INNER JOIN
+  * LEFT JOIN
+  * RIGHT JOIN
+  * FULL OUTER JOIN
+* Combined multiple tables to extract meaningful insights
 
-### 🔹 NULL Handling
+### 🔹 Problem Solving
 
-* Handled missing values using:
-
-  * `IS NULL`
-  * `IS NOT NULL`
-  * `COALESCE()`
-* Replaced NULL values with default values
-
-### 🔹 Date Manipulation
-
-* Performed date-based operations:
-
-  * Extracted year/month using `YEAR()`, `MONTH()`
-  * Calculated date differences
-  * Formatted date columns
+* Solved SQL problems using GROUP BY and JOINs
+* Validated outputs step by step
+* Ensured correctness using sample queries
 
 ---
 
-## 🔧 Key SQL Functions Used
+## 🔧 Key SQL Concepts Used
 
-* `CASE WHEN` → Conditional logic
-* `ROW_NUMBER()`, `RANK()`, `DENSE_RANK()` → Window functions
-* `SUM() OVER()` → Running totals
-* `UPPER()`, `LOWER()`, `TRIM()` → String handling
-* `COALESCE()` → NULL handling
-* `YEAR()`, `MONTH()` → Date extraction
+* GROUP BY → Grouping data
+* SUM(), COUNT(), AVG() → Aggregations
+* JOIN → Combining tables
+* WHERE → Filtering data
+* HAVING → Filtering aggregated results
 
 ---
 
 ## 📈 Outcome
 
-* Successfully applied advanced SQL concepts
-* Solved problems using window functions and CASE statements
-* Improved data cleaning and transformation skills
+* Successfully implemented GROUP BY and JOIN queries
+* Solved real-time SQL problems
+* Gained hands-on experience in Databricks SQL
 
 ---
 
 ## 📚 Learnings
 
-* Better understanding of conditional logic in SQL
-* Strong knowledge of window functions for analytics
-* Learned how to handle NULL values effectively
-* Improved skills in string and date transformations
+* Strong understanding of aggregation logic
+* Clear concept of joins and table relationships
+* Improved SQL query writing skills
+* Better confidence in solving data problems
 
 ---
 
 ## ✅ Conclusion
 
-Day 3 focused on advanced SQL concepts such as CASE statements, window functions, string manipulation, NULL handling, and date operations. These skills are essential for performing complex data analysis and building efficient SQL queries.
+Day 2 focused on core SQL concepts like GROUP BY and JOINs. This helped in understanding data aggregation and relationships, which are essential for data analysis and data engineering.

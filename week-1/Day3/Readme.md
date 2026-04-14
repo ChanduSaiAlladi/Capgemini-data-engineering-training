@@ -1,169 +1,95 @@
+# 🚀 Day 3 – SQL Practice (CASE, Window Functions & Advanced Functions)
 
-# 📊 Week 1 – Day 4 (Advanced SQL Assignment – Student Submission Analysis)
+## 📌 Objective
 
-## **Objective**
-To analyze student submission data using SQL and PySpark by handling real-world data inconsistencies such as duplicate records, invalid entries, and multiple email mappings, with a focus on joins and window functions.
-
----
-
-## **Problem Summary**
-
-Day 4 focuses on a real-world data analysis scenario involving:
-
-- **Student Master Data**
-- **Task 1 Responses**
-- **Task 1 File 2 (duplicates + invalid records)**
-
-The goal is to:
-- Clean and normalize data  
-- Map multiple emails to a single student  
-- Identify valid, invalid, and missing submissions  
-- Detect duplicate submissions using window functions  
-- Generate final classification of all students  
+The objective of Day 3 was to strengthen SQL skills by practicing **CASE statements, window functions, string functions, NULL handling, and date manipulation**, and applying them to solve real-world problems.
 
 ---
 
-## **Approach**
+## 📊 Topics Covered
 
-### **1. Data Setup**
-- Loaded datasets from CSV files into Spark / SQL environment  
-- Created structured views/tables for:
-  - students  
-  - responses  
-  - responses2  
-
----
-
-### **2. Data Cleaning**
-
-Handled real-world data issues:
-
-#### 🔹 Column Cleaning
-- Removed unwanted spaces in column names  
-- Renamed columns to meaningful names  
-
-#### 🔹 Email Normalization
-- Converted emails to lowercase  
-- Trimmed spaces  
-- Ensured consistent format  
-
-#### 🔹 Timestamp Handling
-- Parsed multiple timestamp formats  
-- Used safe conversion methods to avoid errors  
+* CASE and WHEN statements
+* Window functions
+* String functions
+* NULL handling functions
+* Date manipulation functions
 
 ---
 
-### **3. Data Merging**
+## ⚙️ Work Done
 
-Combined both response datasets:
+### 🔹 CASE & WHEN Statements
 
-#### 🔹 Full Outer Join
-- Merged `responses_clean` and `responses2_clean`  
+* Used `CASE WHEN` for conditional logic
+* Categorized data based on conditions
+* Created new derived columns
 
-#### 🔹 COALESCE Usage
-- Filled missing values from alternate dataset  
+### 🔹 Window Functions
 
-#### 🔹 Duplicate Email Handling
-- Removed personal email entries if same GitHub exists with college email  
+* Applied window functions for advanced analysis:
 
----
+  * `ROW_NUMBER()`
+  * `RANK()`
+  * `DENSE_RANK()`
+  * `SUM()` over window
+* Performed ranking and running total calculations
 
-### **4. Core Analysis**
+### 🔹 String Functions
 
-#### 🔹 Valid Submissions
-- Identified using INNER JOIN with student email mapping  
+* Worked with string operations:
 
-#### 🔹 Invalid Submissions
-- Emails not present in student master (LEFT ANTI JOIN)  
+  * `UPPER()`, `LOWER()`
+  * `TRIM()`
+  * `CONCAT()`
+* Cleaned and formatted text data
 
-#### 🔹 Not Submitted
-- Students with no submission records  
+### 🔹 NULL Handling
 
----
+* Handled missing values using:
 
-### **5. Duplicate Detection (Window Functions)**
+  * `IS NULL`
+  * `IS NOT NULL`
+  * `COALESCE()`
+* Replaced NULL values with default values
 
-Used:
+### 🔹 Date Manipulation
 
-- `ROW_NUMBER() OVER (PARTITION BY student_id ORDER BY submission_time)`
+* Performed date-based operations:
 
-#### 🔹 Logic
-- First submission → valid  
-- Remaining → duplicates  
-
----
-
-### **6. Advanced Insights**
-
-- Counted submissions per student  
-- Identified students using both emails  
-- Generated final classification:
-
-| Status         | Description |
-|---------------|------------|
-| Submitted     | Valid single submission |
-| Duplicate     | Multiple submissions |
-| Not Submitted | No submission |
-| Invalid       | Email not in master |
+  * Extracted year/month using `YEAR()`, `MONTH()`
+  * Calculated date differences
+  * Formatted date columns
 
 ---
 
-## **Key Concepts Covered**
+## 🔧 Key SQL Functions Used
 
-- SQL Joins (Inner, Left, Anti, Full Outer)  
-- Window Functions (ROW_NUMBER)  
-- Data Cleaning & Normalization  
-- Handling inconsistent real-world datasets  
-- Building structured data pipelines  
-
----
-
-## **Folder Structure**
-
-Day4/
-│
-├── raw_data/  
-│   ├── Capgemini Databricks VITB-2026 (1).csv  
-│   ├── Task 1 (Responses).csv  
-│   └── Task 1 file 2.csv  
-│
-├── Solution.ipynb → Implementation  
-├── Problem_Statement → Problem statement reference  
-│
-└── README.md  
+* `CASE WHEN` → Conditional logic
+* `ROW_NUMBER()`, `RANK()`, `DENSE_RANK()` → Window functions
+* `SUM() OVER()` → Running totals
+* `UPPER()`, `LOWER()`, `TRIM()` → String handling
+* `COALESCE()` → NULL handling
+* `YEAR()`, `MONTH()` → Date extraction
 
 ---
 
-## **Output / Results**
+## 📈 Outcome
 
-- Cleaned and unified dataset  
-- Valid vs Invalid submission identification  
-- Duplicate submission detection  
-- Final classified dataset for all students  
-
----
-
-## **Challenges Faced**
-
-- Handling messy column names with spaces  
-- Dealing with multiple timestamp formats  
-- Mapping emails correctly across datasets  
-- Removing duplicate and redundant records  
-- Choosing correct join strategies  
+* Successfully applied advanced SQL concepts
+* Solved problems using window functions and CASE statements
+* Improved data cleaning and transformation skills
 
 ---
 
-## **Learnings**
+## 📚 Learnings
 
-- Real-world data is always inconsistent and requires preprocessing  
-- Window functions are more effective than GROUP BY for duplicate handling  
-- Joins must be chosen carefully based on logic  
-- Data cleaning is the foundation of any pipeline  
-- Structured thinking is more important than just writing queries  
+* Better understanding of conditional logic in SQL
+* Strong knowledge of window functions for analytics
+* Learned how to handle NULL values effectively
+* Improved skills in string and date transformations
 
 ---
 
-## **Conclusion**
+## ✅ Conclusion
 
-Day 4 focused on solving a real-world data problem involving multiple datasets and inconsistencies. It helped in building a complete pipeline from raw data cleaning to final classification using SQL and PySpark, strengthening practical data engineering skills.
-
+Day 3 focused on advanced SQL concepts such as CASE statements, window functions, string manipulation, NULL handling, and date operations. These skills are essential for performing complex data analysis and building efficient SQL queries.
